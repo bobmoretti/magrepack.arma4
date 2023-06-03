@@ -1,0 +1,8 @@
+GameProject {
+ ID "MagRepack"
+ GUID "5D86592E838B9FE5"
+ TITLE "MagRepack"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
