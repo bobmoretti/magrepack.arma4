@@ -124,10 +124,26 @@ class MR_PlayerMagRepackComponent : ScriptComponent
 
     void RepackAllMags()
     {
-        while (CanRepack())
+        int repackCount;
+        for (repackCount = 0; CanRepack(); repackCount++)
         {
             RepackMags();
         }
+		if (repackCount == 0)
+		{
+			SCR_HintManagerComponent.GetInstance().ShowCustom("Found no magazines to repack.");
+			return;
+		}
+        string s;
+        if (repackCount > 1)
+        {
+            s = "s";
+        }
+        else
+        {
+            s = "";
+        }
+        SCR_HintManagerComponent.GetInstance().ShowCustom(string.Format("Repacked %1 magazine%2.", repackCount, s));
     }
 
     void RepackMags()
