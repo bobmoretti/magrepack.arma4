@@ -1,0 +1,7 @@
+SCR_ChimeraCharacter {
+ ID "520EC961A090B1EE"
+ components {
+  MR_PlayerMagRepackComponent "{5D86DEBB99BDD6AE}" {
+  }
+ }
+}
